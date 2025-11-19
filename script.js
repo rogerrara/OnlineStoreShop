@@ -15,18 +15,17 @@ document.querySelectorAll(".nav-links a").forEach(link => {
     });
 });
 
-// -------------------------------
 // CART DROPDOWN
 const cartIcon = document.getElementById("cartIcon");
 const cartDropdown = document.getElementById("cartDropdown");
 
-// Toggle cart dropdown on click
+// Toggle cart dropdown
 cartIcon.addEventListener("click", (e) => {
-    e.stopPropagation(); // prevent click from closing immediately
+    e.stopPropagation();
     cartDropdown.classList.toggle("show-cart");
 });
 
-// Close cart if clicked outside
+// Close cart if clicking outside
 document.addEventListener("click", () => {
     cartDropdown.classList.remove("show-cart");
 });
