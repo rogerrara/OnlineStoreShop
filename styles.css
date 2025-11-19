@@ -132,7 +132,7 @@ nav {
 .search-box input {
     border: none;
     outline: none;
-    width: 120px; /* default width */
+    width: 120px;
 }
 
 .search-icon {
@@ -196,33 +196,100 @@ nav {
     transition: 0.2s ease;
 }
 
-/* RESPONSIVE: MOBILE VIEW */
-@media (max-width: 768px) {
-
-    nav {
-        flex-wrap: wrap;
-        padding: 10px;
+/* DESKTOP VIEW */
+@media (min-width: 769px) {
+    .hamburger {
+        display: block; /* always visible as requested */
     }
 
+    .nav-links {
+        position: static;
+        width: auto;
+        height: auto;
+        padding: 0;
+        left: 0;
+        background: none;
+    }
+
+    .nav-links ul {
+        display: flex;
+        gap: 20px;
+    }
+
+    .nav-links li {
+        border: none;
+        padding: 0;
+    }
+
+    /* HOVER EFFECT */
+    .nav-links li:hover {
+        background: #055f7a;
+    }
+
+    .nav-links a:hover {
+        color: #ffeb3b;
+    }
+}
+
+/* MOBILE VIEW */
+@media (max-width: 768px) {
+
+    /* Navbar container height */
+    nav {
+        flex-wrap: wrap;
+        padding: 10px 15px;
+        height: 100px;
+    }
+
+    /* Left nav alignment */
     .left-nav {
         flex: 1 1 100%;
         justify-content: space-between;
+        align-items: center;
+        height: 100%;
     }
 
+    /* Logo size */
+    .logo img {
+        width: 70px;
+        height: 100px;
+    }
+
+    /* Right section alignment */
     .right-section {
         flex: 1 1 100%;
         display: flex;
         justify-content: flex-end;
-        margin-top: 8px;
+        align-items: center;
         gap: 10px;
+        height: 100%;
+        margin-top: 0;
+    }
+
+    /* Search box size */
+    .search-box {
+        height: 40px;
     }
 
     .search-box input {
-        width: 80px; /* smaller input on mobile */
+        width: 120px;
+        height: 30px;
     }
 
+    /* Hamburger icon size */
+    .hamburger {
+        width: 35px;
+        height: 35px;
+    }
+
+    /* Cart icon size */
+    .cart-icon {
+        font-size: 28px;
+    }
+
+    /* Slide menu */
     .nav-links {
         width: 250px;
-        padding-top: 100px;
+        padding-top: 120px;
     }
 }
