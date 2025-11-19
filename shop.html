@@ -1,71 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shop</title>
-  <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RaRush</title>
+<link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
-<!-- NAV BAR -->
+<!-- NAVBAR -->
 <nav>
-  <span id="menuBtn" class="menu-btn">☰</span>
 
-  <div class="logo">
-    <img src="logo.png" alt="Logo">
+  <!-- LEFT SIDE: LOGO + HAMBURGER -->
+  <div class="left-nav">
+      <div class="logo">
+          <img src="logo.png" alt="Logo">
+      </div>
+
+      <div class="hamburger" id="hamburger">
+          <span class="line line1"></span>
+          <span class="line line2"></span>
+          <span class="line line3"></span>
+      </div>
   </div>
-
-  <div class="search-box">
-    <input type="text" placeholder="Search products...">
-    <button>🔍</button>
-  </div>
-
-  <div class="icons">
-    <span id="cartBtn">🛒</span>
-  </div>
-
-  <ul id="navLinks">
-    <li onclick="location.href='index.html'">Home</li>
-    <li onclick="location.href='shop.html'">Shop</li>
-    <li>Video</li>
-    <li>Music</li>
-    <li>Contact Us</li>
-    <li>About Us</li>
+<!-- SLIDE MENU -->
+<div class="nav-links" id="navLinks">
+  <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="video.html">Video</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
   </ul>
+</div>
+
+  <!-- RIGHT SIDE (Search + Cart) — HIDDEN ON MOBILE -->
+  <div class="right-section">
+      <div class="search-box">
+          <input type="text" placeholder="Search...">
+          <span class="search-icon">🔍</span>
+      </div>
+
+      <div class="cart-wrapper">
+          <span class="cart-icon" id="cartIcon">🛒</span>
+
+          <div class="cart-dropdown" id="cartDropdown">
+       
+          </div>
+      </div>
+  </div>
+
+
+
 </nav>
-
-<!-- CART PANEL -->
-<div id="cartContainer">
-  <h3>Your Cart</h3>
-  <div id="cartList"></div>
-</div>
-
-<!-- SHOP ITEMS -->
-<div class="shop-container">
-  <div class="item-box">
-    <img src="item1.png" alt="Item 1">
-    <h3>Sample Item 1</h3>
-    <p>₱500</p>
-    <button class="add-btn" onclick="addToCart('Sample Item 1', 500)">Add to Cart</button>
-  </div>
-
-  <div class="item-box">
-    <img src="item2.png" alt="Item 2">
-    <h3>Sample Item 2</h3>
-    <p>₱350</p>
-    <button class="add-btn" onclick="addToCart('Sample Item 2', 350)">Add to Cart</button>
-  </div>
-
-  <div class="item-box">
-    <img src="item3.png" alt="Item 3">
-    <h3>Sample Item 3</h3>
-    <p>₱899</p>
-    <button class="add-btn" onclick="addToCart('Sample Item 3', 899)">Add to Cart</button>
-  </div>
-</div>
-
 <script src="script.js"></script>
+
 </body>
 </html>

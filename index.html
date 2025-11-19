@@ -3,59 +3,56 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Navbar Test</title>
+<title>RaRush</title>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <!-- NAVBAR -->
 <nav>
-  <!-- LEFT: LOGO -->
-  <div class="logo">
-      <img src="logo.png" alt="Logo">
-  </div>
 
-  <!-- HAMBURGER ICON -->
-  <div class="hamburger" id="hamburger">
-      <span class="line line1"></span>
-      <span class="line line2"></span>
-      <span class="line line3"></span>
-  </div>
+  <!-- LEFT SIDE: LOGO + HAMBURGER -->
+  <div class="left-nav">
+      <div class="logo">
+          <img src="logo.png" alt="Logo">
+      </div>
 
-  <!-- NAV LINKS -->
-  <div class="nav-links" id="navLinks">
-      <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="shop.html">Shop</a></li>
-          <li><a href="video.html">Video</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-      </ul>
+      <div class="hamburger" id="hamburger">
+          <span class="line line1"></span>
+          <span class="line line2"></span>
+          <span class="line line3"></span>
+      </div>
   </div>
+<!-- SLIDE MENU -->
+<div class="nav-links" id="navLinks">
+  <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="video.html">Video</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+  </ul>
+</div>
 
-  <!-- RIGHT SECTION -->
+  <!-- RIGHT SIDE (Search + Cart) — HIDDEN ON MOBILE -->
   <div class="right-section">
-
-      <!-- SEARCH BOX WRAPPER -->
       <div class="search-box">
           <input type="text" placeholder="Search...">
           <span class="search-icon">🔍</span>
       </div>
 
-      <!-- CART WRAPPER -->
       <div class="cart-wrapper">
           <span class="cart-icon" id="cartIcon">🛒</span>
 
-          <!-- CART DROPDOWN PANEL -->
           <div class="cart-dropdown" id="cartDropdown">
-              <h3>Your Cart</h3>
-              <p class="empty-msg">Your cart is empty.</p>
+       
           </div>
       </div>
-
   </div>
-</nav>
 
+
+
+</nav>
 <script src="script.js"></script>
 
 </body>
