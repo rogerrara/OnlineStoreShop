@@ -1,0 +1,208 @@
+/* GENERAL */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* NAVBAR */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background: #004766;
+  color: white;
+  position: relative;
+}
+
+/* DEBUG BACKGROUNDS SO YOU CAN SEE BOXES */
+.logo { background: #ffb7b2; padding: 5px; }
+.hamburger { background: #c7ffd8; padding: 5px; }
+.nav-links { background: #003545; }
+.right-section { background: #d7eaff; padding: 5px; }
+
+/* LOGO */
+.logo img {
+  width: 70px;
+  height: 90px;
+  object-fit: contain;
+}
+
+/* HAMBURGER ICON */
+.hamburger {
+  width: 35px;
+  height: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.hamburger .line {
+  height: 4px;
+  background: white;
+  border-radius: 4px;
+  transition: 0.3s ease;
+}
+
+/* PERFECT X ANIMATION */
+.hamburger.active .line1 {
+  transform: translateY(12px) rotate(45deg);
+}
+
+.hamburger.active .line2 {
+  opacity: 0;
+}
+
+.hamburger.active .line3 {
+  transform: translateY(-12px) rotate(-45deg);
+}
+
+/* NAV LINKS – HIDDEN BY DEFAULT */
+.nav-links {
+  position: fixed;
+  top: 0;
+  left: -260px;
+  width: 260px;
+  height: 100%;
+  padding-top: 120px;
+  transition: 0.3s ease;
+}
+
+.nav-links.active {
+  left: 0;
+}
+
+.nav-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.nav-links li {
+  padding: 20px;
+  border-bottom: 1px solid #07475f;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+}
+
+/* RIGHT SIDE */
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* --- SEARCH BOX WRAPPER (NEW) --- */
+.search-box {
+  position: relative;
+}
+
+/* Old input styling still works */
+.right-section input {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+/* Search Icon position (NEW) */
+.search-icon {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+/* --- CART WRAPPER (NEW) --- */
+.cart-wrapper {
+  position: relative;
+}
+
+/* CART ICON (NEW) */
+.cart-icon {
+  cursor: pointer;
+  font-size: 22px;
+  transition: transform 0.2s ease;
+}
+
+.cart-icon:hover {
+  transform: scale(1.15);
+}
+
+/* DROPDOWN CART PANEL (NEW) */
+.cart-dropdown {
+  position: absolute;
+  top: 35px;        /* appears below cart icon */
+  right: 0;
+  width: 240px;
+  padding: 15px;
+  background: rgba(230, 230, 230, 0.95);
+  border-radius: 10px;
+  display: none;      /* hidden by default */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  color: black;
+  z-index: 999;
+}
+
+.cart-dropdown h3 {
+  margin: 0 0 10px;
+  font-size: 17px;
+}
+
+.cart-dropdown .empty-msg {
+  color: #666;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* For future cart items */
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.cart-item:last-child {
+  border-bottom: none;
+}
+
+/* DESKTOP VIEW */
+@media (min-width: 768px) {
+  .hamburger {
+      display: none;
+  }
+
+  .nav-links {
+      position: static;
+      width: auto;
+      height: auto;
+      padding: 0;
+      left: 0;
+      background: none;
+  }
+
+  .nav-links ul {
+      display: flex;
+      gap: 20px;
+  }
+
+  /* HOVER EFFECT */
+  .nav-links li:hover {
+      background: #055f7a;
+      transition: 0.3s ease;
+  }
+
+  .nav-links a:hover {
+      color: #ffeb3b; /* yellow highlight */
+  }
+
+  .nav-links li {
+      border: none;
+      padding: 0;
+  }
+}
